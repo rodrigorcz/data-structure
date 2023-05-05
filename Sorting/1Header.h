@@ -6,3 +6,4 @@ typedef struct {
 } list;
 
 void counting_sort(list l);
+void bubble_sort(list l);
