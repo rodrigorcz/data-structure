@@ -1,5 +1,5 @@
 /**
- *  Time Complexity: O(n)
+ *  Time Complexity: O(n+k)
  *  Space Complexity: O(max)     
  *  Stability: Yes
  */
@@ -9,6 +9,7 @@
 #include <stdlib.h>
 
 void counting_sort(list l){
+    //considering l.data >= 0
     long max, i, j = 0; 
     max = l.data[0];
 
