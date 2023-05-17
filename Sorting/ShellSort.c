@@ -1,7 +1,6 @@
 /**
  *  Time Complexity: O(nlogn) Best and Average cases => n^1.25
- *                   O(n^2) Worst cases => n(logn)^2
- *  Space Complexity: O(1)     
+ *                   O(n^2) Worst cases => n(logn)^2  
  *  Stability: No
  */
 
