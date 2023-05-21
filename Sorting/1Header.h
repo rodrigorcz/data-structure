@@ -1,9 +1,10 @@
+//Lists for data storage
 typedef struct {
     long *data;
     long *copy;
     long *count;
     long size;
-} list;
+}list;
 
 void counting_sort(list l);
 void bubble_sort(list l);
