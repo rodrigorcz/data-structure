@@ -42,12 +42,19 @@ int sentinel_sequential_search(int *vet, int size, int elem){
 */
 
 bool move_to_front_search(int *vet, int size, int elem){
-    int aux, i;
-    for(i = 0; i< size; i++)
+    int aux1, aux2, i;
+    for(i = 0; i< size; i++){
         if(vet[i] == elem){
-            
+            aux1 = elem;
+            for(int j = 0; j<i;j++){
+                aux2 = vet[j+1];
+                vet[j+1] = vet [j]; 
+                vet[j] = aux2;
+            }
+            return true;
         }
-    
+    }
+    return false;
 }
 
 bool transpose_search(int *vet, int size, int elem){
