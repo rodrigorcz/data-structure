@@ -1,4 +1,4 @@
-#define SIZE_MAX 10000000
+#define SIZE_MAX 1000000
 //Lists for data storage
 typedef struct {
     long *data;
