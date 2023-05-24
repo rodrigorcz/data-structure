@@ -42,15 +42,22 @@ int sentinel_sequential_search(int *vet, int size, int elem){
 */
 
 bool move_to_front_search(int *vet, int size, int elem){
-    int aux1, aux2, i;
+    int aux[size], i;
     for(i = 0; i< size; i++){
         if(vet[i] == elem){
-            aux1 = elem;
-            for(int j = 0; j<i;j++){
-                aux2 = vet[j+1];
-                vet[j+1] = vet [j]; 
-                vet[j] = aux2;
+            //auxiliar array
+            for(int j = 1; j<size;j++){
+                aux[0] = elem;
+                if(j!=i+1)
+                    aux[j] = vet[j-1];
+                else
+                    aux[j] = vet[j];   
+                    
             }
+            //overwriting the original array
+            for(int h = 0; h<size; h++)
+                vet[h] = aux[h];
+
             return true;
         }
     }
