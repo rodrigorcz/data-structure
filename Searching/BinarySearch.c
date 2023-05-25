@@ -38,13 +38,14 @@ int iterative_binary_search(int *vet, int elem, int size){
     while (bot <= top) {
         mid = bot + (top - bot) / 2;
         
+        //elem is in the middle
         if (vet[mid] == elem)
             return mid; 
         
-        if (vet[mid] > elem)
-            top = mid - 1; 
-        else
-            top = mid + 1; 
+        if (vet[mid] > elem) 
+            top = mid - 1; //search at the bottom
+        else              
+            bot = mid + 1; //search at the top   
     
     return -1; 
 }
