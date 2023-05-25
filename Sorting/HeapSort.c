@@ -28,7 +28,6 @@ void heapify(list l, long i, long sizeH){
     l.data[mf] = aux;
 
     rearranjar_heap(l, mf, sizeH);
-
 }
 
 void build_heap(list l){

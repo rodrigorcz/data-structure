@@ -52,7 +52,7 @@ int indexed_sequential_search(int *vet, int size, int elem, elem_i index[], int 
     // vet is already sorted
     int i, j;
 
-    // sequential search in the indexed array
+    // sequential search in the index array
     for (i = 0; i < sizei; i++)
         if (index[i].kindex > elem)
             break;
@@ -67,6 +67,7 @@ int indexed_sequential_search(int *vet, int size, int elem, elem_i index[], int 
     
     return (j < size &&vet[j] == elem) ? j : -1;
 }
+
 /* 
     Self Organization Methods 
 
