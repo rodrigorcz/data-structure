@@ -11,7 +11,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 
 /* 
     Sequential Search Methods
@@ -75,7 +74,7 @@ int indexed_sequential_search(int *vet, int size, int elem, elem_i index[], int 
     
 */
 
-bool move_to_front_search(int *vet, int size, int elem){
+int move_to_front_search(int *vet, int size, int elem){
     //auxiliar array
     int aux[size], i;
     for(i = 0; i< size; i++){
@@ -93,13 +92,13 @@ bool move_to_front_search(int *vet, int size, int elem){
             for(int h = 0; h<size; h++)
                 vet[h] = aux[h];
 
-            return true;
+            return i;
         }
     }
-    return false;
+    return -1;
 }
 
-bool transpose_search(int *vet, int size, int elem){
+int transpose_search(int *vet, int size, int elem){
     int aux, i;
 
     for(i = 0; i<size; i++)
@@ -107,7 +106,7 @@ bool transpose_search(int *vet, int size, int elem){
             aux = vet[i-1];
             vet[i-1] = vet[i];
             vet[i] = aux;
-            return true;
+            return i;
         }
-    return false;
+    return -1;
 }
